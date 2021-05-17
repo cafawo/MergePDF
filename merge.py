@@ -23,6 +23,7 @@ def merge(input_folder = True, output_file = True, sort = True):
         
     merger = PdfFileMerger()
     for pdf in input_files:
+        print(f'Appending file: {pdf}')
         merger.append(os.path.join(input_folder,pdf))
     merger.write(output_file)
 
